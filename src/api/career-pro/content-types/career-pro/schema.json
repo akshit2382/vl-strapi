@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "career_pros",
+  "info": {
+    "singularName": "career-pro",
+    "pluralName": "career-pros",
+    "displayName": "CareerPro"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CareerID": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "OCC_CODE": {
+      "type": "string",
+      "required": true
+    },
+    "CareerTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CareerDescription": {
+      "type": "text"
+    }
+  }
+}
