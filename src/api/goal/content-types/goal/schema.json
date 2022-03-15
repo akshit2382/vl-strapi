@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "goals",
+  "info": {
+    "singularName": "goal",
+    "pluralName": "goals",
+    "displayName": "Goal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "goal_name": {
+      "type": "string"
+    },
+    "goal_duration": {
+      "type": "integer"
+    },
+    "goal_description": {
+      "type": "text"
+    },
+    "location": {
+      "type": "string"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "goals"
+    }
+  }
+}

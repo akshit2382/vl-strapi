@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vl_user_details",
+  "info": {
+    "singularName": "vl-user-detail",
+    "pluralName": "vl-user-details",
+    "displayName": "VL_user_detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": false,
+      "unique": false
+    },
+    "dob": {
+      "type": "date"
+    },
+    "zipcode": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female",
+        "Others"
+      ]
+    },
+    "race": {
+      "type": "string"
+    },
+    "vl_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vl-user.vl-user",
+      "inversedBy": "vl_user_detail"
+    }
+  }
+}

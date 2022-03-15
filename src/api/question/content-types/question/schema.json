@@ -16,10 +16,6 @@
       "type": "string",
       "required": true
     },
-    "answerType": {
-      "type": "string",
-      "required": true
-    },
     "answer": {
       "type": "relation",
       "relation": "oneToOne",
@@ -30,6 +26,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
+      "inversedBy": "questions"
+    },
+    "answer_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::answer-type.answer-type",
       "inversedBy": "questions"
     }
   }

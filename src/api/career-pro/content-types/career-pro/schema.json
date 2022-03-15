@@ -12,23 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "CareerID": {
-      "type": "integer",
-      "required": true,
-      "unique": true
-    },
-    "CareerTitle": {
-      "type": "string",
-      "required": true
-    },
-    "CareerDescription": {
-      "type": "text"
-    },
-    "occ_code": {
+    "career_pro_info": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::career-pro-info.career-pro-info",
-      "mappedBy": "occ_code"
+      "inversedBy": "career_pro"
+    },
+    "occ": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "careerTitle": {
+      "type": "string"
+    },
+    "careerDescription": {
+      "type": "string"
     }
   }
 }

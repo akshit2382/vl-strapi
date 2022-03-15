@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vl_users",
+  "info": {
+    "singularName": "vl-user",
+    "pluralName": "vl-users",
+    "displayName": "VL_user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phone_no": {
+      "type": "biginteger",
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": false
+    },
+    "social_id": {
+      "type": "string"
+    },
+    "social_platform_name": {
+      "type": "string"
+    },
+    "vl_user_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vl-user-detail.vl-user-detail",
+      "inversedBy": "vl_user"
+    },
+    "answers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answer.answer",
+      "mappedBy": "vl_user"
+    }
+  }
+}

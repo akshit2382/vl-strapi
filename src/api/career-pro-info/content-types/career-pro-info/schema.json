@@ -17,12 +17,6 @@
       "required": true,
       "type": "integer"
     },
-    "occ_code": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::career-pro.career-pro",
-      "inversedBy": "occ_code"
-    },
     "AreaType": {
       "type": "integer"
     },
@@ -49,6 +43,12 @@
     },
     "Salary_7_to_10": {
       "type": "biginteger"
+    },
+    "career_pro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::career-pro.career-pro",
+      "mappedBy": "career_pro_info"
     }
   }
 }
