@@ -4,7 +4,8 @@
   "info": {
     "singularName": "career-pro",
     "pluralName": "career-pros",
-    "displayName": "CareerPro"
+    "displayName": "CareerPro",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,16 +17,18 @@
       "required": true,
       "unique": true
     },
-    "OCC_CODE": {
-      "type": "string",
-      "required": true
-    },
     "CareerTitle": {
       "type": "string",
       "required": true
     },
     "CareerDescription": {
       "type": "text"
+    },
+    "occ_code": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::career-pro-info.career-pro-info",
+      "mappedBy": "occ_code"
     }
   }
 }

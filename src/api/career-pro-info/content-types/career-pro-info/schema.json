@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "career_pro_infos",
+  "info": {
+    "singularName": "career-pro-info",
+    "pluralName": "career-pro-infos",
+    "displayName": "CareerProInfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CareerSalaryID": {
+      "unique": true,
+      "required": true,
+      "type": "integer"
+    },
+    "occ_code": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::career-pro.career-pro",
+      "inversedBy": "occ_code"
+    },
+    "AreaType": {
+      "type": "integer"
+    },
+    "Area": {
+      "type": "integer"
+    },
+    "AreaTitle": {
+      "type": "string"
+    },
+    "StateName": {
+      "type": "string"
+    },
+    "TotalEmployment": {
+      "type": "biginteger"
+    },
+    "Salary_0_to_3": {
+      "type": "biginteger"
+    },
+    "Salary_3_to_5": {
+      "type": "biginteger"
+    },
+    "Salary_5_to_7": {
+      "type": "biginteger"
+    },
+    "Salary_7_to_10": {
+      "type": "biginteger"
+    }
+  }
+}
