@@ -4,7 +4,8 @@
   "info": {
     "singularName": "task",
     "pluralName": "tasks",
-    "displayName": "Task"
+    "displayName": "Task",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,11 +15,17 @@
     "task_name": {
       "type": "string"
     },
-    "course": {
+    "task_description": {
+      "type": "text"
+    },
+    "task_duration": {
+      "type": "integer"
+    },
+    "goals": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::course.course",
-      "inversedBy": "tasks"
+      "relation": "manyToMany",
+      "target": "api::goal.goal",
+      "mappedBy": "tasks"
     }
   }
 }

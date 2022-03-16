@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * answer-type service.
+ * solution service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::answer-type.answer-type');
+module.exports = createCoreService('api::solution.solution');

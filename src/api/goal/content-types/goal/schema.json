@@ -4,7 +4,8 @@
   "info": {
     "singularName": "goal",
     "pluralName": "goals",
-    "displayName": "Goal"
+    "displayName": "Goal",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,10 +24,16 @@
     "location": {
       "type": "string"
     },
-    "courses": {
+    "tasks": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::course.course",
+      "target": "api::task.task",
+      "inversedBy": "goals"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
       "inversedBy": "goals"
     }
   }
