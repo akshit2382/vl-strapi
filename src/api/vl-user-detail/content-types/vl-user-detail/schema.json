@@ -4,7 +4,8 @@
   "info": {
     "singularName": "vl-user-detail",
     "pluralName": "vl-user-details",
-    "displayName": "VL_user_detail"
+    "displayName": "VL_user_detail",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -38,6 +39,9 @@
       "relation": "oneToOne",
       "target": "api::vl-user.vl-user",
       "inversedBy": "vl_user_detail"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }
