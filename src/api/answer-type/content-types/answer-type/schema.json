@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "questions": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::question.question",
-      "mappedBy": "answer_type"
-    },
     "answerType": {
       "type": "string"
     }
