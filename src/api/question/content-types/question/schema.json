@@ -28,14 +28,14 @@
       "target": "api::category.category",
       "inversedBy": "questions"
     },
-    "masterdata": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::masterdata.masterdata",
-      "mappedBy": "question"
-    },
     "valueType": {
       "type": "string"
+    },
+    "masterdata": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::masterdata.masterdata",
+      "inversedBy": "questions"
     }
   }
 }

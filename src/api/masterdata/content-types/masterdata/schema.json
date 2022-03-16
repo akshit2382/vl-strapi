@@ -4,7 +4,8 @@
   "info": {
     "singularName": "masterdata",
     "pluralName": "masterdatas",
-    "displayName": "Masterdata"
+    "displayName": "Masterdata",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,9 +15,9 @@
     "Values": {
       "type": "string"
     },
-    "question": {
+    "questions": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::question.question",
       "inversedBy": "masterdata"
     }
