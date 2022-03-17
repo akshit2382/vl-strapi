@@ -4,7 +4,8 @@
   "info": {
     "singularName": "solution",
     "pluralName": "solutions",
-    "displayName": "Solution"
+    "displayName": "Solution",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,12 @@
   "attributes": {
     "solution_name": {
       "type": "string"
+    },
+    "tasks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::task.task",
+      "inversedBy": "solutions"
     }
   }
 }

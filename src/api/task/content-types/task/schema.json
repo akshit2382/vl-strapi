@@ -26,6 +26,12 @@
       "relation": "manyToMany",
       "target": "api::goal.goal",
       "mappedBy": "tasks"
+    },
+    "solutions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::solution.solution",
+      "inversedBy": "tasks"
     }
   }
 }
