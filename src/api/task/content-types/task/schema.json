@@ -4,7 +4,7 @@
   "info": {
     "singularName": "task",
     "pluralName": "tasks",
-    "displayName": "Task",
+    "displayName": "Algorithm_Task",
     "description": ""
   },
   "options": {
@@ -21,17 +21,23 @@
     "task_duration": {
       "type": "integer"
     },
-    "goals": {
+    "goal": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::goal.goal",
-      "mappedBy": "tasks"
+      "inversedBy": "tasks"
     },
-    "solutions": {
+    "solution": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::solution.solution",
       "inversedBy": "tasks"
+    },
+    "user_task": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-task.user-task",
+      "mappedBy": "task"
     }
   }
 }

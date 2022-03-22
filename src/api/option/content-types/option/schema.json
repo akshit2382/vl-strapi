@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "masterdatas",
+  "collectionName": "options",
   "info": {
-    "singularName": "masterdata",
-    "pluralName": "masterdatas",
-    "displayName": "Masterdata",
+    "singularName": "option",
+    "pluralName": "options",
+    "displayName": "Admin_Option",
     "description": ""
   },
   "options": {
@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Values": {
+    "Value": {
       "type": "string"
     },
     "questions": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::question.question",
-      "inversedBy": "masterdata"
+      "mappedBy": "options"
     }
   }
 }

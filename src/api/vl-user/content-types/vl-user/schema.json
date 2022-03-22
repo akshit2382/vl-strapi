@@ -4,7 +4,7 @@
   "info": {
     "singularName": "vl-user",
     "pluralName": "vl-users",
-    "displayName": "VL_user",
+    "displayName": "User_VL_user",
     "description": ""
   },
   "options": {
@@ -40,6 +40,18 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::answer.answer",
+      "mappedBy": "vl_user"
+    },
+    "user_goals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-goal.user-goal",
+      "mappedBy": "vl_user"
+    },
+    "user_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-task.user-task",
       "mappedBy": "vl_user"
     }
   }

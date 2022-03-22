@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_tasks",
+  "info": {
+    "singularName": "user-task",
+    "pluralName": "user-tasks",
+    "displayName": "User_Tasks",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "task_name": {
+      "type": "string"
+    },
+    "task_description": {
+      "type": "text"
+    },
+    "task_duration": {
+      "type": "integer"
+    },
+    "vl_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vl-user.vl-user",
+      "inversedBy": "user_tasks"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "user_tasks"
+    },
+    "user_goal": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-goal.user-goal",
+      "inversedBy": "user_tasks"
+    },
+    "task": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::task.task",
+      "inversedBy": "user_task"
+    },
+    "solution": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::solution.solution",
+      "inversedBy": "user_tasks"
+    },
+    "user_activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-activity.user-activity",
+      "mappedBy": "user_task"
+    }
+  }
+}

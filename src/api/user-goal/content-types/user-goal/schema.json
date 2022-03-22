@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_goals",
+  "info": {
+    "singularName": "user-goal",
+    "pluralName": "user-goals",
+    "displayName": "User_Goals",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "goal_name": {
+      "type": "string"
+    },
+    "goal_description": {
+      "type": "string"
+    },
+    "goal_duration": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "vl_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vl-user.vl-user",
+      "inversedBy": "user_goals"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "user_goals"
+    },
+    "user_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-task.user-task",
+      "mappedBy": "user_goal"
+    },
+    "goal": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::goal.goal",
+      "mappedBy": "user_goal"
+    }
+  }
+}

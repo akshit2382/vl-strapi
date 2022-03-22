@@ -4,7 +4,7 @@
   "info": {
     "singularName": "question",
     "pluralName": "questions",
-    "displayName": "question",
+    "displayName": "Admin_Question",
     "description": ""
   },
   "options": {
@@ -31,10 +31,10 @@
     "valueType": {
       "type": "string"
     },
-    "masterdata": {
+    "options": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::masterdata.masterdata",
+      "target": "api::option.option",
       "inversedBy": "questions"
     }
   }

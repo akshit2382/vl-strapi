@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  masterdata controller
+ *  user-task controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::masterdata.masterdata');
+module.exports = createCoreController('api::user-task.user-task');

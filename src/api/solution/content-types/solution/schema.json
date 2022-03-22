@@ -4,7 +4,7 @@
   "info": {
     "singularName": "solution",
     "pluralName": "solutions",
-    "displayName": "Solution",
+    "displayName": "Admin_Solution",
     "description": ""
   },
   "options": {
@@ -17,9 +17,21 @@
     },
     "tasks": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::task.task",
+      "mappedBy": "solution"
+    },
+    "goal": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::goal.goal",
       "inversedBy": "solutions"
+    },
+    "user_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-task.user-task",
+      "mappedBy": "solution"
     }
   }
 }

@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * masterdata service.
+ * user-goal service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::masterdata.masterdata');
+module.exports = createCoreService('api::user-goal.user-goal');

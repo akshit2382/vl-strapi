@@ -4,7 +4,7 @@
   "info": {
     "singularName": "goal",
     "pluralName": "goals",
-    "displayName": "Goal",
+    "displayName": "Algorithm_Goal",
     "description": ""
   },
   "options": {
@@ -24,17 +24,29 @@
     "location": {
       "type": "string"
     },
-    "tasks": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::task.task",
-      "inversedBy": "goals"
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "goals"
+    },
+    "tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::task.task",
+      "mappedBy": "goal"
+    },
+    "solutions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::solution.solution",
+      "mappedBy": "goal"
+    },
+    "user_goal": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-goal.user-goal",
+      "inversedBy": "goal"
     }
   }
 }

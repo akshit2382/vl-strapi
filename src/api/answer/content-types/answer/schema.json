@@ -4,7 +4,7 @@
   "info": {
     "singularName": "answer",
     "pluralName": "answers",
-    "displayName": "Answer",
+    "displayName": "User_Answer",
     "description": ""
   },
   "options": {
