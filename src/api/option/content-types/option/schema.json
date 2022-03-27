@@ -20,6 +20,12 @@
       "relation": "manyToMany",
       "target": "api::question.question",
       "mappedBy": "options"
+    },
+    "admin_subquestion": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::admin-subquestion.admin-subquestion",
+      "inversedBy": "admin_options"
     }
   }
 }

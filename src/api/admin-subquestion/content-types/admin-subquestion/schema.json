@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "admin_subquestions",
+  "info": {
+    "singularName": "admin-subquestion",
+    "pluralName": "admin-subquestions",
+    "displayName": "Admin_Subquestion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subquestion": {
+      "type": "string"
+    },
+    "admin_options": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::option.option",
+      "mappedBy": "admin_subquestion"
+    },
+    "admin_question": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "admin_subquestions"
+    },
+    "user_answer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::answer.answer",
+      "inversedBy": "admin_subquestion"
+    }
+  }
+}

@@ -16,12 +16,6 @@
       "type": "string",
       "required": true
     },
-    "answer": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::answer.answer",
-      "inversedBy": "question"
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
@@ -36,6 +30,18 @@
       "relation": "manyToMany",
       "target": "api::option.option",
       "inversedBy": "questions"
+    },
+    "admin_subquestions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::admin-subquestion.admin-subquestion",
+      "mappedBy": "admin_question"
+    },
+    "multiple_subquestions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::multiple-subquestion.multiple-subquestion",
+      "mappedBy": "admin_question"
     }
   }
 }

@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "question": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::question.question",
-      "mappedBy": "answer"
-    },
     "answer": {
       "type": "string",
       "required": true
@@ -27,6 +21,18 @@
       "relation": "manyToOne",
       "target": "api::vl-user.vl-user",
       "inversedBy": "answers"
+    },
+    "admin_subquestion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::admin-subquestion.admin-subquestion",
+      "inversedBy": "user_answer"
+    },
+    "admin_multiple_subquestion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::multiple-subquestion.multiple-subquestion",
+      "inversedBy": "user_answer"
     }
   }
 }
