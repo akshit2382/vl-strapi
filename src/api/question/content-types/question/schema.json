@@ -25,12 +25,6 @@
     "valueType": {
       "type": "string"
     },
-    "options": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::option.option",
-      "inversedBy": "questions"
-    },
     "admin_subquestions": {
       "type": "relation",
       "relation": "oneToMany",

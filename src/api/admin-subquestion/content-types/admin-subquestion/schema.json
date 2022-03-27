@@ -14,12 +14,6 @@
     "subquestion": {
       "type": "string"
     },
-    "admin_options": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::option.option",
-      "mappedBy": "admin_subquestion"
-    },
     "admin_question": {
       "type": "relation",
       "relation": "manyToOne",
@@ -31,6 +25,12 @@
       "relation": "oneToOne",
       "target": "api::answer.answer",
       "inversedBy": "admin_subquestion"
+    },
+    "admin_options": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::option.option",
+      "inversedBy": "admin_subquestions"
     }
   }
 }
