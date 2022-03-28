@@ -4,7 +4,8 @@
   "info": {
     "singularName": "admin-subquestion",
     "pluralName": "admin-subquestions",
-    "displayName": "Admin_Subquestion"
+    "displayName": "Admin_Subquestion",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -31,6 +32,16 @@
       "relation": "manyToMany",
       "target": "api::option.option",
       "inversedBy": "admin_subquestions"
+    },
+    "subquestion_icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

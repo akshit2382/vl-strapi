@@ -19,7 +19,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::admin-subquestion.admin-subquestion",
-      "inversedBy": "admin_options"
+      "mappedBy": "admin_options"
     }
   }
 }

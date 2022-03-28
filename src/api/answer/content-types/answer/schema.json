@@ -26,7 +26,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::admin-subquestion.admin-subquestion",
-      "inversedBy": "user_answer"
+      "mappedBy": "user_answer"
     },
     "admin_multiple_subquestion": {
       "type": "relation",
