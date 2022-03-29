@@ -20,6 +20,16 @@
       "relation": "manyToMany",
       "target": "api::admin-subquestion.admin-subquestion",
       "mappedBy": "admin_options"
+    },
+    "option_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
